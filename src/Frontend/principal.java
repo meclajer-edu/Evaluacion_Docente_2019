@@ -3,10 +3,15 @@ package Frontend;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+import java.awt.FlowLayout;
+import java.awt.SystemColor;
+import java.awt.Window.Type;
 
 public class principal {
 
-	private JFrame frame;
+	private JFrame frmEvaluacionDocente;
 
 	/**
 	 * Launch the application.
@@ -16,7 +21,7 @@ public class principal {
 			public void run() {
 				try {
 					principal window = new principal();
-					window.frame.setVisible(true);
+					window.frmEvaluacionDocente.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -35,9 +40,16 @@ public class principal {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmEvaluacionDocente = new JFrame();
+		frmEvaluacionDocente.setTitle("Evaluacion Docente");
+		frmEvaluacionDocente.setResizable(false);
+		frmEvaluacionDocente.setBounds(100, 100, 689, 762);
+		frmEvaluacionDocente.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(SystemColor.inactiveCaption);
+		frmEvaluacionDocente.getContentPane().add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
 	}
 
 }
