@@ -24,6 +24,9 @@ import javax.swing.JScrollPane;
 import java.awt.Button;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JMenuBar;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 
 public class Principal extends JFrame {
 
@@ -73,6 +76,40 @@ public class Principal extends JFrame {
 		panel_Body.setBackground(new Color(240, 255, 255));
 		contentPane.add(panel_Body, BorderLayout.CENTER);
 		panel_Body.setLayout(null);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 976, 22);
+		panel_Body.add(menuBar);
+		
+		JMenu mnAsignacion = new JMenu("Asignacion");
+		menuBar.add(mnAsignacion);
+		
+		JMenuItem mntmAsignarMaterias = new JMenuItem("Asignar materias");
+		mnAsignacion.add(mntmAsignarMaterias);
+		
+		JMenu mnMaterias = new JMenu("Materias");
+		menuBar.add(mnMaterias);
+		
+		JMenuItem mntmNuevaMateria = new JMenuItem("Nueva");
+		mnMaterias.add(mntmNuevaMateria);
+		
+		JMenuItem mntmEliminarMateria = new JMenuItem("Eliminar");
+		mnMaterias.add(mntmEliminarMateria);
+		
+		JMenuItem mntmAdministrar = new JMenuItem("Administrar");
+		mnMaterias.add(mntmAdministrar);
+		
+		JMenu mnDocentes = new JMenu("Docentes");
+		menuBar.add(mnDocentes);
+		
+		JMenuItem mntmNuevo = new JMenuItem("Nuevo");
+		mnDocentes.add(mntmNuevo);
+		
+		JMenuItem mntmEliminar = new JMenuItem("Eliminar");
+		mnDocentes.add(mntmEliminar);
+		
+		JMenuItem mntmAdministrar_1 = new JMenuItem("Administrar");
+		mnDocentes.add(mntmAdministrar_1);
 		
 		JLabel lblFiltrarPor = new JLabel("Filtrar por:");
 		lblFiltrarPor.setFont(new Font("Tahoma", Font.PLAIN, 30));
